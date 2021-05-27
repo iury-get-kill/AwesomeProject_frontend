@@ -23,7 +23,7 @@ export default function Login({navigation}) {
 
   return (
       <View style={[styles.container, specificStyle.SpecificContainer]}>
-      <Text h1 >Entrar na CASA DO COREANO</Text>
+      <Text h1 >Entrar na CASA DO COREANO!</Text>
       <Input
         placeholder="E-mail"
         leftIcon={{ type: 'font-awesome', name: 'envelope' }}
