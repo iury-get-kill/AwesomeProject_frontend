@@ -6,38 +6,43 @@ import styles from '../style/MainStyle';
 
 
 
-export default function Login({navigation}) {
+export default function Cadastro({navigation}) {
 
   const [email, setEmail] = useState(null)
-  const [password, setPassword] = useState(null)
+  const [nome, setNome] = useState(null)
+  const [cpf, setCpf] = useState(null)
+  const [telefone, setTelefone] = useState(null)
 
-  const entrar = () =>{
-
-    navigation.reset({
-      index: 0,
-      routes: [{name: "Principal"}]
-    })
-
-  }
-
-  const cadastrar = () =>{
-    navigation.navigate("Cadastro")
+  const salvar = () =>{
+      console.log("Salvou")
   }
 
   return (
       <View style={[styles.container, specificStyle.SpecificContainer]}>
-      <Text h1 >Entrar na CASA DO COREANO</Text>
+      <Text h1 >Cadastre-se</Text>
       <Input
         placeholder="E-mail"
-        leftIcon={{ type: 'font-awesome', name: 'envelope' }}
         onChangeText={value => setEmail(value)}
         keyboardType="email-address"
       />
-      <Input
-        placeholder="Sua senha"
-        leftIcon={{ type: 'font-awesome', name: 'lock' }}
-        onChangeText={value => setPassword(value)}
-        secureTextEntry={true}
+
+<Input
+        placeholder="Nome"
+        onChangeText={value => setNome(value)}
+      />
+
+<Input
+        placeholder="CPF"
+        onChangeText={value => setCpf(value)}
+        keyboardType="number-pad"
+        returnKeyType="done"
+      />
+
+<Input
+        placeholder="Telefone"
+        onChangeText={value => setTelefone(value)}
+        keyboardType="phone-pad"
+        returnKeyType="done"
       />
 
       <Button
@@ -48,24 +53,10 @@ export default function Login({navigation}) {
       color="white"
     />
   }
-  title="Entrar"
+  title="Salvar"
   buttonStyle={specificStyle.button}
-  onPress={ () => entrar ()}
+  onPress={ () => salvar ()}
 />
-
-<Button
-  icon={
-    <Icon
-      name="user"
-      size={15}
-      color="white"
-    />
-  }
-  title=" Cadastrar"
-  buttonStyle={specificStyle.button}
-  onPress={ () => cadastrar ()}
-/>
-
     </View>
   );
 }
