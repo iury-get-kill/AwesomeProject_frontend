@@ -51,7 +51,8 @@ export default function Cadastro({navigation}) {
   }
 
   return (
-      <View style={[styles.container, specificStyle.SpecificContainer]}>
+      <View
+      style={[styles.container, specificStyle.SpecificContainer]}>
       <Text h1 >Cadastre-se</Text>
       <Input
         placeholder="E-mail"
