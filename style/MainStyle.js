@@ -1,26 +1,28 @@
 import { StyleSheet } from 'react-native';
-
 const styles = StyleSheet.create({
+    button: {
+      width: "100%",
+      marginTop: 10
+    },  
+    cancelButton: {
+      backgroundColor: "#c00"
+    },
     container: {
       flex: 1,
-      backgroundColor: '#000',
+      backgroundColor: '#ccc',
       alignItems: 'center',
       justifyContent: 'center',
-      borderColor: '#BEBEBE',
-      borderWidth: 3,
-      borderStyle: 'solid',
-  
     },
-    maskedInput:{
+    maskedInput: {
       flexGrow: 1,
       height: 40,
       fontSize: 18,
-      borderBottomColor: '#999',
+      borderBottomColor: "#999",
       borderBottomWidth: 1,
       borderStyle: "solid",
       alignSelf: "flex-start"
     },
-    containerMask:{
+    containerMask: {
       flexDirection: "row",
       marginBottom: 5,
       marginLeft: 10,
@@ -34,4 +36,4 @@ const styles = StyleSheet.create({
     }
   });
 
-  export default styles
+export default styles
